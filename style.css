@@ -1,0 +1,484 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fullbox {
+    /* position: relative;
+    width: auto;
+    height: auto;
+    background-color: red; */
+}
+
+.fullbox::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: "";
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    /* background-color: rgb(194, 152, 152); */
+    background-color: red;
+    z-index: 1;
+    display: none;
+}
+
+.container {
+    width: 1275px;
+    margin: auto;
+    position: relative;
+}
+
+.search_engine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #3985ff;
+    position: relative;
+}
+
+.header {
+    width: 1275px;
+    height: 45px;
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+
+}
+
+.search_engine input {
+    font-size: 20px;
+    outline: none;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-radius: 3px;
+    padding: 3px 20px 3px 10px;
+    margin-left: 25px;
+}
+
+.search_engine p {
+    font-size: 33px;
+    color: #ff7400;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 1px #f3f405;
+}
+
+.search_engine span {
+    color: #e03b3b;
+    position: absolute;
+    right: 33.5%;
+    font-size: 20px;
+}
+
+#resultBox {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 15px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    margin-top: 50px;
+    /* background-color: red; */
+    position: absolute;
+    top: 20px;
+
+}
+
+.cart {
+    position: relative;
+    border: 1px solid #00d8ff;
+    box-shadow: 1px 3px 15px 2px #000;
+    width: 300px;
+    height: 350px;
+    margin: 10px 0;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+
+.cart h2 {
+    position: relative;
+    color: green;
+    font-size: 30px;
+    font-family: sans-serif;
+    margin-top: 15px;
+}
+
+.cart h4 {
+    font-size: 20px;
+    color: #72210c;
+    margin-bottom: 5px;
+}
+
+.cart p {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #311e1e;
+    margin-bottom: 12px;
+}
+
+.cart h2::before {
+    position: absolute;
+    width: 93%;
+    content: "";
+    background-color: #050004;
+    height: 1px;
+    top: -2px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: brown;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.image {
+    width: 200px;
+    height: 160px;
+    margin: 21px 0 0 30px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.addCart {
+    width: 80px;
+    height: 35px;
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    color: #fff;
+    background-color: #348729;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-top: 7px;
+}
+
+.fa-solida {
+    position: absolute;
+    color: #020303;
+    text-shadow: none;
+    top: -13px;
+    font-size: 16px !important;
+    left: 30px;
+}
+
+.search_engine .cart-area {
+    position: absolute;
+    right: 50px;
+    font-size: 25px;
+}
+
+
+#modaal {
+    overflow: scroll;
+    box-shadow: 0px 0px 4px 1px rgba(56, 52, 56, 0.667);
+    background-color: rgb(182, 211, 211);
+    width: 1275px;
+    top: 66px;
+    height: 630px;
+    position: fixed;
+    z-index: 2;
+    display: none;
+    /* top: 66px;
+    left: -500px;
+    transform-origin: left;
+    width: 368px;
+    border: none;
+    transition: 1s all; */
+}
+
+#modaal .btnClose {
+    position: fixed;
+    right: 125px;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 3px 10px;
+    color: red;
+    border: 1px solid;
+    border-radius: 3px;
+    z-index: 3;
+}
+
+#modaal::-webkit-scrollbar {
+    display: none;
+}
+
+.profuct-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    margin-bottom: 12px;
+    column-gap: 14px;
+    width: 80%;
+    padding-top: 20px;
+}
+
+.profuct-image::before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    bottom: -17px;
+    width: 100%;
+    background-color: rgb(239, 235, 235);
+}
+
+.div1 {
+    width: 21%;
+    border: 1px solid rgb(137, 93, 93);
+    height: 200px;
+    border-radius: 20px;
+    border-radius: 15px;
+}
+
+.div1 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.counterDiv {
+    margin-left: 15px;
+    width: 25% !important;
+}
+
+.div3 {
+    border: 2px solid rgb(192 198 207);
+    width: 28%;
+    height: 215px;
+    padding: 10px;
+    font-family: sans-serif;
+    color: blueviolet;
+    line-height: 25px;
+}
+
+.div3 p {
+    color: green;
+    font-weight: 500;
+    font-family: "nuto", sans-serif;
+    font-size: 25px;
+    text-align: center;
+    margin: 10px 0;
+    border-bottom: 1px solid #a8edda;
+}
+
+.div3 h4 span {
+    font-weight: 700;
+    color: red;
+}
+
+.div3 h2 {
+    color: brown;
+    border-top: 2px solid;
+    padding-top: 6px;
+    margin-top: 9px;
+    border-color: darkseagreen;
+}
+
+.title {
+    color: #8c03f5 !important;
+    font-size: 18px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+.description {
+    color: #669021 !important;
+    font-family: sans-serif;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.ratingArea {
+    border: 1px solid green;
+    width: 45px;
+    padding: 2px;
+    background: green;
+    color: white;
+    margin-top: 5px;
+    display: inline-block;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.cart .price .fron-card {
+    font-size: 18px;
+}
+
+.fa-star {
+    font-size: 13.2px;
+    margin-left: 3px;
+}
+
+.fa-indian-rupee-sign {
+    font-size: 21px;
+    padding-right: 3px;
+}
+
+.fa-dollar-sign {
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+
+/* co8unt of item section in this loine  */
+.countOfItem {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    column-gap: 3px;
+    margin-top: 7px;
+}
+
+#show {
+    border: 2px solid #348729d4;
+    background-color: #f3f0f0;
+    color: green;
+    width: 40px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+.countBtn {
+    width: 24px;
+    height: 24px;
+    font-size: 18px;
+    border: 2px solid #348729d4;
+    background-color: #f3f0f0;
+    color: green;
+    border-radius: 50%;
+}
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    .fullbox {}
+
+    .header {
+        width: 298px;
+        margin-top: 2px;
+    }
+
+    .search_engine {
+        height: 160%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 12px;
+        width: 96%;
+    }
+
+    .search_engine input {
+        padding: 7px 0;
+        font-size: 14px;
+        margin-left: 3px;
+        padding-left: 14px;
+    }
+
+    .search_engine .cart-area {
+        position: absolute;
+        right: 20px;
+        font-size: 19px;
+        top: 10px;
+    }
+
+    #modaal {
+        width: 95%;
+        top: 75px;
+    }
+
+    #modaal .btnClose {
+        right: 5px;
+        border-radius: 8px;
+        border: 1px solid green;
+        color: green;
+    }
+
+    .search_engine .content {
+        font-size: 25px;
+    }
+
+    .search_engine span {
+        right: 65px;
+        font-size: 16px;
+        bottom: 6px;
+    }
+
+    .cart {
+        width: 281px;
+        height: 350px;
+        margin: 10px 0 0 10px;
+    }
+
+    .container {
+        width: 93%;
+    }
+
+    .containera {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* modaaal section  */
+    .profuct-image {
+        border-radius: 34px;
+        display: block;
+        border: 1px solid #2900ff;
+        margin-top: 10px;
+    }
+
+
+    .div1 {
+        width: 94%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .rupiya {
+        font-size: 15px;
+    }
+
+    .div3 {
+        width: auto;
+        height: 170px;
+        padding: 0 10px;
+        line-height: 20px;
+    }
+
+    .div3 p {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .div3 h2 {
+        font-size: 15px;
+        color: #006dff;
+    }
+
+    .counterDiv {
+        width: auto !important;
+    }
+
+    .countOfItem {
+        display: inline-block;
+    }
+
+    #show {
+        display: inline-grid;
+    }
+
+}
